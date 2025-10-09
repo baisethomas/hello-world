@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Todo List</h1>
+        <p>Keep track of what needs doing.</p>
+      </header>
+
+      <section class="app__input">
+        <form id="todo-form" autocomplete="off">
+          <label class="sr-only" for="todo-input">Add a task</label>
+          <input
+            id="todo-input"
+            name="todo"
+            type="text"
+            placeholder="What needs to be done?"
+            required
+            minlength="1"
+          />
+          <button type="submit">Add</button>
+        </form>
+        <p id="feedback" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="app__list">
+        <h2 class="sr-only">Todos</h2>
+        <ul id="todo-list"></ul>
+      </section>
+
+      <footer class="app__footer">
+        <button id="clear-completed" type="button">Clear completed</button>
+        <span id="summary" aria-live="polite"></span>
+      </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
